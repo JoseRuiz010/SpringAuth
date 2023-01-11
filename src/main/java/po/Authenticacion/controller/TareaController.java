@@ -2,6 +2,7 @@ package po.Authenticacion.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import po.Authenticacion.model.Tarea;
@@ -11,7 +12,7 @@ import po.Authenticacion.model.Tarea;
 public class TareaController {
 	
 	@GetMapping("/")
-	public  Tarea getTareas() {
+	public @ResponseBody Tarea getTareas() {
 		Tarea tarea= new Tarea();
 		tarea.setNombre("Tarea 1");
 		tarea.setDescripcion("Descripcion tarea1");
